@@ -1,0 +1,25 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+	<!-- action创建交给struts2自己创建 -->
+	<!--<package name="user" extends="struts-default" namespace="/">
+		<action name="index">
+			<result>/jsp/index.jsp</result>
+		</action>
+		<action name="save" method="save" class="com.julyday.action.UserAction">
+			<result>/jsp/success.jsp</result>
+		</action>
+	</package>-->
+	
+	<!-- action创建交给spring来创建 -->
+	<package name="user" extends="struts-default" namespace="/">
+		<action name="index">
+			<result>/jsp/index.jsp</result>
+		</action>
+		<action name="save" method="save" class="userAction">
+			<result>/jsp/success.jsp</result>
+		</action>
+	</package>
+</struts>
